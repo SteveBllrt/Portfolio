@@ -2,7 +2,12 @@ import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { assets } from "../assets/assets";
 
-const Navbar = () => {
+interface NavbarProps {
+  isDarkMode: boolean;
+  setIsDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ isDarkMode, setIsDarkMode }) => {
   const [isScroll, setIsScroll] = useState(false);
   const sideMenuRef = useRef<HTMLUListElement | null>(null);
 
@@ -30,18 +35,20 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]">
+      <div className="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%] dark: hidden">
         <Image src={assets.header_bg} alt="" className="w-full" />
       </div>
 
       <nav
         className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 ${
-          isScroll ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm" : ""
+          isScroll
+            ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm dark:bg-darkTheme dark:shadow-white/20"
+            : ""
         }`}
       >
         <a href="#top">
           <Image
-            src={assets.logo}
+            src={isDarkMode ? assets.logo_dark : assets.logo}
             alt=""
             className="w-28 cursor-pointer mr-14"
           />
@@ -49,7 +56,9 @@ const Navbar = () => {
 
         <ul
           className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${
-            isScroll ? "" : "bg-white shadow-sm bg-opacity-50"
+            isScroll
+              ? ""
+              : "bg-white shadow-sm bg-opacity-50 dark border dark:border-white/5- dark:bg-transparent"
           }`}
         >
           <li>
@@ -70,13 +79,17 @@ const Navbar = () => {
         </ul>
 
         <div className="flex items-center gap-4">
-          <button>
-            <Image src={assets.dark_mode} alt="" className="w-5" />
+          <button onClick={() => setIsDarkMode((prev: boolean) => !prev)}>
+            <Image
+              src={isDarkMode ? assets.dark_mode : assets.sunny}
+              alt=""
+              className="w-5"
+            />
           </button>
 
           <a
             href="#contact"
-            className="hidden lg:flex items-center gap-3 px-10  py-2 border border-gray-400 rounded-full ml-4 font-Ovo"
+            className="hidden lg:flex items-center gap-3 px-10  py-2 border border-gray-400 rounded-full ml-4 font-Ovo dark:border-white/50"
           >
             Contact
             <Image src={assets.arrow_up} alt="" className="w-3" />

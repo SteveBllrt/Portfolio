@@ -18,6 +18,8 @@ import send_icon from "./send-icon.png";
 import asana from "./asana.png";
 import slack from "./slack.png";
 import mail from "./mail-icon.png";
+import sunny from "./sunny.png";
+import logo_dark from "./logo-dark.png";
 
 export const assets = {
   dark_mode,
@@ -40,6 +42,8 @@ export const assets = {
   asana,
   slack,
   mail,
+  sunny,
+  logo_dark,
 };
 
 export const workData = [
