@@ -1,8 +1,9 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { assets } from "../assets/assets";
 
 const Navbar = () => {
+  const [isScroll, setIsScroll] = useState(false);
   const sideMenuRef = useRef<HTMLUListElement | null>(null);
 
   const openMenu = () => {
@@ -17,13 +18,27 @@ const Navbar = () => {
     }
   };
 
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (scrollY > 50) {
+        setIsScroll(true);
+      } else {
+        setIsScroll(false);
+      }
+    });
+  }, []);
+
   return (
     <>
       <div className="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]">
         <Image src={assets.header_bg} alt="" className="w-full" />
       </div>
 
-      <nav className="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50">
+      <nav
+        className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 ${
+          isScroll ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm" : ""
+        }`}
+      >
         <a href="#top">
           <Image
             src={assets.logo}
@@ -32,7 +47,11 @@ const Navbar = () => {
           />
         </a>
 
-        <ul className="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50">
+        <ul
+          className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${
+            isScroll ? "" : "bg-white shadow-sm bg-opacity-50"
+          }`}
+        >
           <li>
             <a className="font-Ovo" href="#top">
               Home
@@ -44,13 +63,8 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <a className="font-Ovo" href="#services">
-              Service
-            </a>
-          </li>
-          <li>
             <a className="font-Ovo" href="#work">
-              My Work
+              My work
             </a>
           </li>
           <li>
@@ -81,7 +95,7 @@ const Navbar = () => {
         {/* ------ mobile menu ------- */}
         <ul
           ref={sideMenuRef}
-          className="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-[#00ECFD] transition duration-500"
+          className="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-[#BEFBFF] transition duration-500"
         >
           <div className="absolute right-5 top-6" onClick={closeMenu}>
             <Image src={assets.close} alt="" className="w-8 cursor-pointer" />
@@ -98,13 +112,8 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <a className="font-Ovo" onClick={closeMenu} href="#services">
-              Service
-            </a>
-          </li>
-          <li>
             <a className="font-Ovo" onClick={closeMenu} href="#work">
-              My Work
+              My work
             </a>
           </li>
           <li>
