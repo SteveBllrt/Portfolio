@@ -28,7 +28,7 @@ const Header = () => {
         </p>
 
         <div className="flex items-center justify-center">
-          <div className="flex flex-col sm:flex-row items-center gap-4 mt-6 mr-4">
+          <div className="flex flex-col sm:flex-row items-center gap-4 mt-6 mr-2">
             <a
               href="#contact"
               className="px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2"
