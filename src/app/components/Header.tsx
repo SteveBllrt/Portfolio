@@ -31,9 +31,9 @@ const Header = () => {
           <div className="flex flex-col sm:flex-row items-center gap-4 mt-6 mr-2">
             <a
               href="#contact"
-              className="px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2"
+              className="md:px-10 px-8 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2"
             >
-              contact me
+              <p className="text-sm md:text-base"> contact me </p>
               <Image src={assets.right_arrow_up} alt="" className="w-4" />
             </a>
           </div>
@@ -42,9 +42,9 @@ const Header = () => {
             <a
               href="/sample-resume.pdf"
               download
-              className="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2"
+              className="md:px-10 px-8 py-3 border rounded-full border-gray-500 flex items-center gap-2"
             >
-              my resume
+              <p className="text-sm md:text-base"> my resume</p>
               <Image src={assets.download} alt="" className="w-4" />
             </a>
           </div>
