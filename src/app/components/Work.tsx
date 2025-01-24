@@ -9,7 +9,6 @@ const Work = () => {
         Welcome to my web and mobile development portfolio! Explore a collection
         of projects showcasing my expertise in front-end development.
       </p>
-     
     </div>
   );
 };
