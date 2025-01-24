@@ -63,11 +63,6 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <a className="font-Ovo" href="#work">
-              My work
-            </a>
-          </li>
-          <li>
             <a className="font-Ovo" href="#contact">
               Contact me
             </a>
@@ -76,19 +71,19 @@ const Navbar = () => {
 
         <div className="flex items-center gap-4">
           <button>
-            <Image src={assets.dark_mode} alt="" className="w-6" />
+            <Image src={assets.dark_mode} alt="" className="w-5" />
           </button>
 
           <a
             href="#contact"
-            className="hidden lg:flex items-center gap-3 px-10  py-2.5 border border-gray-500 rounded-full ml-4 font-Ovo"
+            className="hidden lg:flex items-center gap-3 px-10  py-2 border border-gray-400 rounded-full ml-4 font-Ovo"
           >
             Contact
             <Image src={assets.arrow_up} alt="" className="w-3" />
           </a>
 
           <button className="block md:hidden ml-3" onClick={openMenu}>
-            <Image src={assets.menu} alt="" className="w-6" />
+            <Image src={assets.menu} alt="" className="w-5" />
           </button>
         </div>
 
@@ -109,11 +104,6 @@ const Navbar = () => {
           <li>
             <a className="font-Ovo" onClick={closeMenu} href="#about">
               About me
-            </a>
-          </li>
-          <li>
-            <a className="font-Ovo" onClick={closeMenu} href="#work">
-              My work
             </a>
           </li>
           <li>

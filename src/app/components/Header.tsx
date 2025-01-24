@@ -22,7 +22,7 @@ const Header = () => {
           frontend developer based in iloilo
         </h1>
         <p className="max-w-2xl mx-auto font-Ovo mt-4">
-          I am a frontend developer from Manduriao, Iloilo, with years of
+          I am a frontend developer from Mandurriao, Iloilo, with years of
           experience in various technologies, including React, Next.js, and
           React Native.
         </p>

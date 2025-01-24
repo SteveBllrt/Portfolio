@@ -11,10 +11,13 @@ import right_arrow_up from "./right-arrow.png";
 import code_icon from "./code-icon.png";
 import edu_icon from "./edu-icon.png";
 import project_icon from "./project-icon.png";
-import git from "./git.png";
+import github from "./github.png";
 import vs_code from "./vs-code.png";
 import figma from "./figma.png";
 import send_icon from "./send-icon.png";
+import asana from "./asana.png";
+import slack from "./slack.png";
+import mail from "./mail-icon.png";
 
 export const assets = {
   dark_mode,
@@ -30,10 +33,13 @@ export const assets = {
   code_icon,
   edu_icon,
   project_icon,
-  git,
+  github,
   vs_code,
   figma,
   send_icon,
+  asana,
+  slack,
+  mail,
 };
 
 export const workData = [
@@ -80,4 +86,10 @@ export const infoList = [
   },
 ];
 
-export const toolsData = [assets.vs_code, assets.figma, assets.git];
+export const toolsData = [
+  assets.vs_code,
+  assets.figma,
+  assets.github,
+  assets.asana,
+  assets.slack,
+];
