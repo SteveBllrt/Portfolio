@@ -2,31 +2,49 @@ import React, { FormEvent, useState } from "react";
 import { assets } from "../assets/assets";
 import Image from "next/image";
 import { motion } from "motion/react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
   const [result, setResult] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const accessKey = "1eca5bab-5c5b-4ece-90de-a601fc85036e";
 
   const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setResult("Sending....");
+    setLoading(true);
+    setResult("Sending...");
+
     const formData = new FormData(event.currentTarget);
+    formData.append("access_key", accessKey);
 
-    formData.append("access_key", process.env.REACT_APP_ACCESS_KEY || "");
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
 
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData,
-    });
+      const data = await response.json();
 
-    const data = await response.json();
-
-    if (data.success) {
-      setResult("Form Submitted Successfully");
-      console.log(result);
-      event.currentTarget.reset();
-    } else {
-      console.log("Error", data);
-      setResult(data.message);
+      if (data.success) {
+        setResult("Form Submitted Successfully");
+        console.log(result);
+        toast.success("Form submitted successfully!");
+        if (event.currentTarget) {
+          event.currentTarget.reset();
+        }
+      } else {
+        console.error("Error", data);
+        setResult(data.message);
+        toast.error("Error: " + data.message);
+      }
+    } catch (error) {
+      console.error("An error occurred:", error);
+      setResult("An error occurred. Please try again.");
+      toast.error("An error occurred. Please try again.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -60,8 +78,8 @@ const Contact = () => {
         transition={{ delay: 0.7, duration: 0.5 }}
         className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo"
       >
-        I&#96;d love to hear from you! If you have any questions, comments
-        or feedback, please use the form below.
+        I&#96;d love to hear from you! If you have any questions, comments or
+        feedback, please use the form below.
       </motion.p>
 
       <motion.form
@@ -111,10 +129,23 @@ const Contact = () => {
           type="submit"
           className="py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500 dark:bg-transparent dark:border-[0.5px] dark:hover:bg-darkHover"
         >
-          Submit now
-          <Image src={assets.right_arrow_up} alt="" className="w-4" />
+          {loading ? (
+            <span>Loading...</span>
+          ) : (
+            <>
+              Submit now{" "}
+              <Image src={assets.right_arrow_up} alt="" className="w-4" />
+            </>
+          )}
         </motion.button>
       </motion.form>
+
+      {/* Toast Notifications */}
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+      />
     </motion.div>
   );
 };
