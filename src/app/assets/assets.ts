@@ -20,6 +20,13 @@ import slack from "./slack.png";
 import mail from "./mail-icon.png";
 import sunny from "./sunny.png";
 import logo_dark from "./logo-dark.png";
+import menu_dark from "./menu-dark.png";
+import arrow_up_dark from "./arrow-up-dark.png";
+import close_dark from "./close-dark.png";
+import code_icon_dark from "./code-icon-dark.png";
+import edu_icon_dark from "./edu-icon-dark.png";
+import project_icon_dark from "./project-icon-dark.png";
+import mail_icon_dark from "./mail-icon-dark.png";
 
 export const assets = {
   dark_mode,
@@ -44,47 +51,31 @@ export const assets = {
   mail,
   sunny,
   logo_dark,
+  menu_dark,
+  arrow_up_dark,
+  close_dark,
+  code_icon_dark,
+  edu_icon_dark,
+  project_icon_dark,
+  mail_icon_dark,
 };
-
-export const workData = [
-  {
-    title: "Frontend project",
-    description: "Web Design",
-    bgImage: "/work_1.png",
-  },
-  {
-    title: "Frontend project",
-    description: "Web Design",
-    bgImage: "/work_2.png",
-  },
-  {
-    title: "Frontend project",
-    description: "Web Design",
-    bgImage: "/work_3.png",
-  },
-  {
-    title: "Frontend project",
-    description: "Web Design",
-    bgImage: "/work_4.png",
-  },
-];
 
 export const infoList = [
   {
     icon: assets.code_icon,
-    iconDark: assets.code_icon,
+    iconDark: assets.code_icon_dark,
     title: "Languages",
     description: "Typescript, React Js, Next Js, React Native",
   },
   {
     icon: assets.edu_icon,
-    iconDark: assets.edu_icon,
+    iconDark: assets.edu_icon_dark,
     title: "Education",
     description: "BS Software Engineering",
   },
   {
     icon: assets.project_icon,
-    iconDark: assets.project_icon,
+    iconDark: assets.project_icon_dark,
     title: "Projects",
     description: "Built more than 5 projects",
   },

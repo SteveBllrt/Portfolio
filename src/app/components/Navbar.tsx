@@ -58,7 +58,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, setIsDarkMode }) => {
           className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${
             isScroll
               ? ""
-              : "bg-white shadow-sm bg-opacity-50 dark border dark:border-white/5- dark:bg-transparent"
+              : "bg-white shadow-sm bg-opacity-50 dark border dark:border-white/50 dark:bg-transparent"
           }`}
         >
           <li>
@@ -92,21 +92,25 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, setIsDarkMode }) => {
             className="hidden lg:flex items-center gap-3 px-10  py-2 border border-gray-400 rounded-full ml-4 font-Ovo dark:border-white/50"
           >
             Contact
-            <Image src={assets.arrow_up} alt="" className="w-3" />
+            <Image src={isDarkMode? assets.arrow_up_dark : assets.arrow_up} alt="" className="w-3" />
           </a>
 
           <button className="block md:hidden ml-3" onClick={openMenu}>
-            <Image src={assets.menu} alt="" className="w-5" />
+            <Image
+              src={isDarkMode ? assets.menu_dark : assets.menu}
+              alt=""
+              className="w-5"
+            />
           </button>
         </div>
 
         {/* ------ mobile menu ------- */}
         <ul
           ref={sideMenuRef}
-          className="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-[#BEFBFF] transition duration-500"
+          className="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-[#BEFBFF] transition duration-500 dark:bg-darkHover dark:text-white"
         >
           <div className="absolute right-5 top-6" onClick={closeMenu}>
-            <Image src={assets.close} alt="" className="w-8 cursor-pointer" />
+            <Image src={isDarkMode ? assets.close_dark :assets.close} alt="" className="w-8 cursor-pointer" />
           </div>
 
           <li>
