@@ -11,7 +11,9 @@ const Header = () => {
           <motion.div
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
-            transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
+            transition={{ duration: 0.3, type: "spring", stiffness: 100 }}
+            animate={{ opacity: 1 }}
+            viewport={{ once: true }}
           >
             <Image
               src={assets.profile}
@@ -22,7 +24,8 @@ const Header = () => {
           <motion.h3
             initial={{ y: -20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{ duration: 0.3, delay: 0.3 }}
+            viewport={{ once: true }}
             className="flex items-center gap-2 text-xl md:text-2xl mb-4 font-Ovo"
           >
             Hi! I’m Steven Ballaret
@@ -33,7 +36,8 @@ const Header = () => {
         <motion.h1
           initial={{ y: -30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
+          transition={{ duration: 0.3, delay: 0.5 }}
+          viewport={{ once: true }}
           className="text-3xl sm:text-6xl lg:text-[58px] font-Ovo lowercase max-w-[500px] mx-auto"
         >
           frontend developer based in iloilo
@@ -42,7 +46,8 @@ const Header = () => {
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.7 }}
+          transition={{ duration: 0.3, delay: 0.7 }}
+          viewport={{ once: true }}
           className="max-w-2xl mx-auto font-Ovo mt-4"
         >
           I am a frontend developer from Mandurriao, Iloilo, with years of
@@ -55,7 +60,8 @@ const Header = () => {
             <motion.a
               initial={{ y: 23, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 1 }}
+              transition={{ duration: 0.3, delay: 1 }}
+              viewport={{ once: true }}
               href="#contact"
               className="md:px-10 px-8 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2 dark:bg-transparent"
             >
@@ -68,7 +74,8 @@ const Header = () => {
             <motion.a
               initial={{ y: 23, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 1.2 }}
+              transition={{ duration: 0.3, delay: 1.1 }}
+              viewport={{ once: true }}
               href="/sample-resume.pdf"
               download
               className="md:px-10 px-8 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black"
