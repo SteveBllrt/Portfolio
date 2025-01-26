@@ -27,12 +27,22 @@ const Footer: React.FC<DarkMode> = ({ isDarkMode }) => {
         <p> @ 2025 Steven B. All rights reserved.</p>
         <ul className="flex items-center gap-10 justify-center mt-4 sm:mt-0">
           <li>
-            <a target="_blank" href="https://github.com/SteveBllrt">
+            <a
+              target="_blank"
+              href="https://github.com/SteveBllrt"
+              className="underline flex items-center"
+            >
+              <Image src={assets.github} alt="" className="w-4 mr-1" />
               Github
             </a>
           </li>
           <li>
-            <a target="_blank" href="https://www.facebook.com/steven.ballaret">
+            <a
+              target="_blank"
+              href="https://www.facebook.com/steven.ballaret"
+              className="underline flex items-center"
+            >
+              <Image src={assets.facebook} alt="" className="w-4 mr-1" />
               Facebook
             </a>
           </li>
@@ -40,7 +50,9 @@ const Footer: React.FC<DarkMode> = ({ isDarkMode }) => {
             <a
               target="_blank"
               href="https://www.linkedin.com/in/steven-ballaret-839373264/"
+              className="underline flex items-center"
             >
+              <Image src={assets.linkedin} alt="" className="w-4 mr-1" />
               Linkedin
             </a>
           </li>

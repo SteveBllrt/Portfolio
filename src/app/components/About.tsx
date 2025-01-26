@@ -90,7 +90,7 @@ const About: React.FC<DarkMode> = ({ isDarkMode }) => {
                 <h3 className="my-4 font-semibold text-gray-700 dark:text-white">
                   {title}
                 </h3>
-                <p className="text-gray-600 text-sm dark:text-white/70">
+                <p className="text-gray-600 text-[13px] dark:text-white/70">
                   {description}
                 </p>
               </motion.li>

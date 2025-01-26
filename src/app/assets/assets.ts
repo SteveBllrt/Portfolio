@@ -27,6 +27,8 @@ import code_icon_dark from "./code-icon-dark.png";
 import edu_icon_dark from "./edu-icon-dark.png";
 import project_icon_dark from "./project-icon-dark.png";
 import mail_icon_dark from "./mail-icon-dark.png";
+import facebook from "./facebook.png";
+import linkedin from "./linkedin.png";
 
 export const assets = {
   dark_mode,
@@ -58,6 +60,8 @@ export const assets = {
   edu_icon_dark,
   project_icon_dark,
   mail_icon_dark,
+  facebook,
+  linkedin,
 };
 
 export const infoList = [
@@ -71,7 +75,7 @@ export const infoList = [
     icon: assets.edu_icon,
     iconDark: assets.edu_icon_dark,
     title: "Education",
-    description: "BS Software Engineering",
+    description: "BS Software Engineering, Central Philippine University",
   },
   {
     icon: assets.project_icon,
