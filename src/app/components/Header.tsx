@@ -76,7 +76,7 @@ const Header = () => {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.3, delay: 1.1 }}
               viewport={{ once: true }}
-              href="/sample-resume.pdf"
+              href="./ballaret-resume.pdf"
               download
               className="md:px-10 px-8 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black"
             >
