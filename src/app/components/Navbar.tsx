@@ -106,7 +106,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, setIsDarkMode }) => {
         {/* ------ mobile menu ------- */}
         <ul
           ref={sideMenuRef}
-          className="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-[#BEFBFF] transition duration-500 dark:bg-darkHover dark:text-white"
+          className="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-[#F8F8F8] transition duration-500 dark:bg-darkHover dark:text-white"
         >
           <div className="absolute right-5 top-6" onClick={closeMenu}>
             <Image
@@ -124,6 +124,11 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, setIsDarkMode }) => {
           <li>
             <a className="font-Ovo" onClick={closeMenu} href="#about">
               About me
+            </a>
+          </li>
+          <li>
+            <a className="font-Ovo" onClick={closeMenu} href="#contact">
+             Contact
             </a>
           </li>
         </ul>
