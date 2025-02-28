@@ -29,6 +29,8 @@ import project_icon_dark from "./project-icon-dark.png";
 import mail_icon_dark from "./mail-icon-dark.png";
 import facebook from "./facebook.png";
 import linkedin from "./linkedin.png";
+import hero_image from "./hero-image.png";
+
 
 export const assets = {
   dark_mode,
@@ -62,6 +64,7 @@ export const assets = {
   mail_icon_dark,
   facebook,
   linkedin,
+  hero_image
 };
 
 export const infoList = [
