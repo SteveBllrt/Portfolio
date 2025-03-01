@@ -50,27 +50,26 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, setIsDarkMode }) => {
           <Image
             src={isDarkMode ? assets.logo_dark : assets.logo}
             alt=""
-            className="w-28 cursor-pointer mr-14"
+            className=" w-24 md:w-28 2xl:w-32 cursor-pointer mr-14"
           />
         </a>
 
         <ul
-          className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${
-            isScroll
-              ? ""
-              : "bg-white shadow-sm bg-opacity-50 dark border dark:border-white/50 dark:bg-transparent"
-          }`}
+          className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 md:text-[16px] 2xl:text-[18px]`}
         >
-          <li>
-            <a className="font-Ovo" href="#top">
-              Home
-            </a>
-          </li>
-          <li>
-            <a className="font-Ovo" href="#about">
-              About me
-            </a>
-          </li>
+          <a
+            className="font-Ovo relative hover:text-[#15546b] after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#15546b] after:transition-all after:duration-300 hover:after:w-full hover:font-semibold"
+            href="#top"
+          >
+            Home
+          </a>
+
+          <a
+            className="font-Ovo relative hover:text-[#15546b] after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#15546b] after:transition-all after:duration-300 hover:after:w-full hover:font-semibold"
+            href="#about"
+          >
+            About me
+          </a>
         </ul>
 
         <div className="flex items-center gap-4">
@@ -84,14 +83,9 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, setIsDarkMode }) => {
 
           <a
             href="#contact"
-            className="hidden lg:flex items-center gap-3 px-10  py-2 border border-gray-400 rounded-full ml-4 font-Ovo dark:border-white/50"
+            className="hidden lg:flex items-center gap-3 px-10  py-1 border border-gray-400 rounded-full ml-4 font-Ovo dark:border-white/50"
           >
             Contact
-            <Image
-              src={isDarkMode ? assets.arrow_up_dark : assets.arrow_up}
-              alt=""
-              className="w-3"
-            />
           </a>
 
           <button className="block md:hidden ml-3" onClick={openMenu}>
@@ -128,7 +122,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, setIsDarkMode }) => {
           </li>
           <li>
             <a className="font-Ovo" onClick={closeMenu} href="#contact">
-             Contact
+              Contact
             </a>
           </li>
         </ul>
