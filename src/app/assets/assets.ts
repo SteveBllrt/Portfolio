@@ -30,6 +30,7 @@ import mail_icon_dark from "./mail-icon-dark.png";
 import facebook from "./facebook.png";
 import linkedin from "./linkedin.png";
 import hero_image from "./hero-image.png";
+import circle_bg from "./circle-bg.png";
 
 
 export const assets = {
@@ -64,7 +65,8 @@ export const assets = {
   mail_icon_dark,
   facebook,
   linkedin,
-  hero_image
+  hero_image,
+  circle_bg
 };
 
 export const infoList = [
