@@ -11,13 +11,13 @@ const About: React.FC<DarkMode> = ({ isDarkMode }) => {
       className="w-full px-[12%] py-10 scroll-mt-20 flex flex-col items-center"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{ duration: 0.3 }}
+      transition={{ duration: 0.2 }}
       viewport={{ once: true }}
     >
       <motion.h4
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.3 }}
+        transition={{ duration: 0.3, delay: 0.1 }}
         viewport={{ once: true }}
         className="text-center mb-3 text-lg font-Ovo"
       >
@@ -26,7 +26,7 @@ const About: React.FC<DarkMode> = ({ isDarkMode }) => {
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.3, delay: 0.5 }}
+        transition={{ duration: 0.3, delay: 0.2 }}
         viewport={{ once: true }}
         className="text-center text-5xl font-Ovo"
       >
@@ -56,7 +56,7 @@ const About: React.FC<DarkMode> = ({ isDarkMode }) => {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.3, delay: 0.8 }}
+          transition={{ duration: 0.3, delay: 0.3 }}
           viewport={{ once: true }}
           className="flex-1 max-w-3xl lg:text-left text-center"
         >
@@ -72,7 +72,7 @@ const About: React.FC<DarkMode> = ({ isDarkMode }) => {
           <motion.ul
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.3, delay: 1 }}
+            transition={{ duration: 0.3, delay: 0.4 }}
             viewport={{ once: true }}
             className="grid grid-cols-1 sm:grid-cols-3 gap-6"
           >
@@ -100,7 +100,7 @@ const About: React.FC<DarkMode> = ({ isDarkMode }) => {
           <motion.h4
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.3, delay: 1.3 }}
+            transition={{ duration: 0.3, delay: 0.5 }}
             viewport={{ once: true }}
             className="my-6 text-gray-700 font-Ovo dark:text-white/80"
           >
@@ -110,7 +110,7 @@ const About: React.FC<DarkMode> = ({ isDarkMode }) => {
           <motion.ul
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.3, delay: 1.5 }}
+            transition={{ duration: 0.3, delay: 0.6 }}
             viewport={{ once: true }}
             className="flex items-center justify-center md:justify-normal gap-3 sm:gap-5"
           >

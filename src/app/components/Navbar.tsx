@@ -58,14 +58,14 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, setIsDarkMode }) => {
           className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 md:text-[16px] 2xl:text-[18px]`}
         >
           <a
-            className="font-Ovo relative hover:text-[#15546b] after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#15546b] after:transition-all after:duration-300 hover:after:w-full hover:font-semibold"
+            className="font-Ovo relative hover:text-[#15546b] dark:hover:text-[#54a9c8] after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#15546b] after:transition-all after:duration-300 hover:after:w-full hover:font-semibold"
             href="#top"
           >
             Home
           </a>
 
           <a
-            className="font-Ovo relative hover:text-[#15546b] after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#15546b] after:transition-all after:duration-300 hover:after:w-full hover:font-semibold"
+            className="font-Ovo relative hover:text-[#15546b] dark:hover:text-[#54a9c8]  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#15546b] after:transition-all after:duration-300 hover:after:w-full hover:font-semibold"
             href="#about"
           >
             About me
@@ -83,7 +83,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, setIsDarkMode }) => {
 
           <a
             href="#contact"
-            className="hidden lg:flex items-center gap-3 px-10  py-1 border border-gray-400 rounded-full ml-4 font-Ovo dark:border-white/50"
+            className="hidden lg:flex items-center gap-3 px-10  py-1 border border-gray-400 rounded-full ml-4 font-Ovo dark:border-white/50 hover:bg-[#F0F0F0] dark:hover:bg-[#646464]"
           >
             Contact
           </a>
